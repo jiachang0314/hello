@@ -1,17 +1,15 @@
 <template>
   <div class="slide-show">
     <div class="slide-img">
-      <a href="">
-        <img :src="slides[1].src" alt="">
+      <a :href="slides[nowIndex].href">
+        <img :src="slides[nowIndex].src" alt="">
       </a>
     </div>
-    <h2>title</h2>
+    <h2>{{ slides[nowIndex].title }}</h2>
     <ul class="slide-pages">
       <li>&lt;</li>
-      <li>
-        <a href="">1</a>
-        <a href="">1</a>
-        <a href="">1</a>
+      <li v-for="(item,index) in slides" @click="goto(index)">
+        <a href="javascript:;">{{ index+1 }}</a>
       </li>
       <li>&gt;</li>
     </ul>
@@ -28,9 +26,14 @@ export default {
   },
   data () {
     return {
-      x: 1
+      nowIndex: 0
     }
   },
+    methods: {
+      goto(index){
+          this.nowIndex = index;
+      }
+    },
     mounted(){
       console.log(this.slides)
     }

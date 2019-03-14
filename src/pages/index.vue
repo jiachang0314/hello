@@ -68,17 +68,17 @@ export default {
             },
             {
                 src: require('../assets/slideShow/pic2.jpg'),
-                title: 'xxx1',
+                title: 'xxx2',
                 href: 'detail/count'
             },
             {
                 src: require('../assets/slideShow/pic3.jpg'),
-                title: 'xxx1',
+                title: 'xxx3',
                 href: 'http://xxx.xxx.com'
             },
             {
                 src: require('../assets/slideShow/pic4.jpg'),
-                title: 'xxx1',
+                title: 'xxx4',
                 href: 'detail/forecast'
             },
 
@@ -169,7 +169,7 @@ export default {
 
 <style scoped>
 .index-wrap {
-  width: 1000px;
+  width: 1200px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -183,7 +183,7 @@ export default {
   width: 70%;
 }
 .index-left-block {
-  margin: 15px 15px 15px 15px;
+  margin: 15px 15px 15px 0px;
   background: #fff;
   box-shadow: 0 0 1px #ddd;
   border-radius: 10px;
